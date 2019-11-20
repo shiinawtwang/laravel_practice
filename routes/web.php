@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend/welcome',['name' => '大帥哥']);
 });
 
 Route::get('users/{name?}', function($name = "Chase"){
