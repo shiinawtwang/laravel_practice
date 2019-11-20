@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('users/{name?}', function($name = "Chase"){
+    return("Hello, I am " .$name);
+});
+
+Route::get('post', 'PostController@index')->name('post.index');
+Route::post('post', 'PostController@login')->name('post.login');
