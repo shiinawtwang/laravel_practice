@@ -23,16 +23,16 @@
 // Route::post('post', 'PostController@login')->name('post.login');
 
 Route::get('/', function () {
-    return view('frontend.index');
+    return view('frontend/index');
 })->name('home');
 
 Route::get('about', function () {
-    return view('frontend.about');
+    return view('frontend/about');
 })->name('about');
  
 Route::get('products', function () {
-    return view('frontend.products');
+    return view('frontend/products');
 })->name('products');
 Route::get('store', function () {
-    return view('frontend.store');
+    return view('frontend/store');
 })->name('store');
