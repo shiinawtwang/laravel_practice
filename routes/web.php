@@ -11,13 +11,28 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('frontend/welcome',['name' => '大帥哥']);
+// });
+
+// Route::get('users/{name?}', function($name = "Chase"){
+//     return("Hello, I am " .$name);
+// });
+
+// Route::get('post', 'PostController@index')->name('post.index');
+// Route::post('post', 'PostController@login')->name('post.login');
+
 Route::get('/', function () {
-    return view('frontend/welcome',['name' => '大帥哥']);
-});
+    return view('frontend.index');
+})->name('home');
 
-Route::get('users/{name?}', function($name = "Chase"){
-    return("Hello, I am " .$name);
-});
-
-Route::get('post', 'PostController@index')->name('post.index');
-Route::post('post', 'PostController@login')->name('post.login');
+Route::get('about', function () {
+    return view('frontend.about');
+})->name('about');
+ 
+Route::get('products', function () {
+    return view('frontend.products');
+})->name('products');
+Route::get('store', function () {
+    return view('frontend.store');
+})->name('store');
